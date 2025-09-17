@@ -1,13 +1,13 @@
 package com.example.demo;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
+@Controller // 컨트롤러 어노테이션 명시
 public class DemoController {
-    @GetMapping(" /hello")
-    public String hello (Model model){
-        model.addAttribute("data", "방갑습니다.");
-        return "hello";
+    @GetMapping("/hello") // 전송 방식 GET
+    public String hello(Model model) {
+        model.addAttribute("data", " 방갑습니다."); // model 설정
+        return "hello"; // hello.html 연결
     }
 }
